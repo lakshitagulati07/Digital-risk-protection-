@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DigiRisk Protect helps users understand digital risks including phishing, brand impersonation, and potential data exposure.">
+    <title>Digital Risk Protection | DigiRisk Protect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a class="logo" href="#" aria-label="DigiRisk Protect home">🛡️ DigiRisk Protect</a>
+        <div class="nav-links">
+            <a href="#tools">Tools</a>
+            <a href="#features">Features</a>
+            <a href="#how">How it Works</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <a href="#tools" class="btn nav-cta">Try Tools</a>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-badge">🛡️ Smarter Digital Safety</div>
+        <h1>Secure Your Digital Presence<br>with Digital Risk Protection</h1>
+        <p>Protect your brand, customers, and data from external digital threats like phishing, impersonation, data leaks, and online fraud — before they cause damage.</p>
+        <div class="hero-buttons">
+            <a href="#tools" class="btn">Try Free Tools</a>
+            <a href="#features" class="btn btn-outline">Explore Features</a>
+        </div>
+        <p class="hero-note">Educational prototype · Results are heuristic estimates, not a live security scan.</p>
+    </header>
+
+    <main>
+        <section class="section" id="tools">
+            <h2 class="section-title">Interactive Protection Tools</h2>
+            <p class="section-subtitle">Try the demo tools below. They check for common warning signs and do not contact a live threat-intelligence service.</p>
+            <div class="tools-grid">
+                <article class="tool-card">
+                    <div class="tool-icon">🔍</div>
+                    <h3>Brand Impersonation Detection</h3>
+                    <p>Enter a website address to check for common fake or lookalike-domain warning signs.</p>
+                    <label for="brandUrl">Website URL</label>
+                    <input type="text" id="brandUrl" placeholder="Example: https://paypa1.com" autocomplete="url">
+                    <button class="btn full-width" id="brandButton" type="button">Check Website</button>
+                    <div id="brandResult" class="result-box" role="status" aria-live="polite"></div>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-icon">🎣</div>
+                    <h3>Phishing &amp; Fraud Protection</h3>
+                    <p>Paste a suspicious link to look for common phishing indicators.</p>
+                    <label for="phishUrl">Suspicious link</label>
+                    <input type="text" id="phishUrl" placeholder="Paste suspicious link here" autocomplete="url">
+                    <button class="btn full-width" id="phishButton" type="button">Scan Link</button>
+                    <div id="phishResult" class="result-box" role="status" aria-live="polite"></div>
+                </article>
+
+                <article class="tool-card">
+                    <div class="tool-icon">📊</div>
+                    <h3>Data Exposure Risk Demo</h3>
+                    <p>Enter an email address to see a demo risk estimate. This does not check actual breaches.</p>
+                    <label for="leakEmail">Email address</label>
+                    <input type="email" id="leakEmail" placeholder="you@example.com" autocomplete="email">
+                    <button class="btn full-width" id="leakButton" type="button">Estimate Risk</button>
+                    <div id="leakResult" class="result-box" role="status" aria-live="polite"></div>
+                    <div id="leakProgress" class="leak-progress" hidden>
+                        <div class="progress-container"><div id="progressBar" class="progress-bar"></div></div>
+                        <p id="leakPercentText" class="progress-label"></p>
+                    </div>
+                </article>
+            </div>
+            <p class="disclaimer">Privacy note: this front-end demo processes the entries in your browser and does not send them to a server. Do not enter real passwords or other sensitive information.</p>
+        </section>
+
+        <section class="section section-white" id="features">
+            <h2 class="section-title">Complete Digital Risk Protection</h2>
+            <p class="section-subtitle">Five modules designed to help identify, understand, and reduce external digital risks.</p>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Brand Protection</h3>
+                    <p><strong>Protecting a brand's online identity</strong></p>
+                    <p>Helps businesses guard their online reputation against fake websites, impersonated social profiles, and misuse of logos.</p>
+                    <ul><li>Spot potential fake websites</li><li>Identify suspicious brand-name use</li><li>Monitor online reputation</li><li>Highlight impersonation warning signs</li></ul>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🎣</div>
+                    <h3>Phishing Detection</h3>
+                    <p><strong>Recognizing fraudulent links and messages</strong></p>
+                    <p>Helps users recognize links that may try to steal passwords, OTPs, banking details, or confidential information.</p>
+                    <ul><li>Review suspicious URLs</li><li>Identify common phishing patterns</li><li>Highlight unusual links or wording</li><li>Offer safety recommendations</li></ul>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Data Leak Monitor</h3>
+                    <p><strong>Awareness of potential data exposure</strong></p>
+                    <p>Supports awareness of exposed emails, credentials, customer records, or confidential documents when connected to trusted data sources.</p>
+                    <ul><li>Track potential data exposure</li><li>Identify sensitive information risks</li><li>Generate exposure alerts</li><li>Recommend protective actions</li></ul>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">👤</div>
+                    <h3>VIP Protection</h3>
+                    <p><strong>Digital protection for high-profile individuals</strong></p>
+                    <p>Helps executives, public figures, and professionals assess impersonation and targeted-attack risks.</p>
+                    <ul><li>Identify possible impersonation</li><li>Review suspicious messages</li><li>Highlight personal-data exposure risks</li><li>Suggest tailored security steps</li></ul>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Dark Web Intelligence</h3>
+                    <p><strong>Awareness of emerging threat indicators</strong></p>
+                    <p>Uses relevant, lawful threat-intelligence sources to help organizations understand potential credential or data exposure.</p>
+                    <ul><li>Review reported data exposures</li><li>Check compromised-credential alerts through trusted services</li><li>Monitor threat indicators</li><li>Provide response recommendations</li></ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section how-section" id="how">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">A simple three-step approach to managing external digital risks.</p>
+            <div class="how-grid">
+                <article class="how-card"><div class="step-number">01</div><h3>Discover</h3><p>Map your public digital footprint, including domains, social profiles, public mentions, and exposed assets.</p></article>
+                <article class="how-card"><div class="step-number">02</div><h3>Detect</h3><p>Look for lookalike domains, phishing indicators, fake profiles, and data-exposure alerts from trusted sources.</p></article>
+                <article class="how-card"><div class="step-number">03</div><h3>Protect</h3><p>Prioritize risks, review alerts, and take action to reduce exposure and protect digital trust.</p></article>
+            </div>
+        </section>
+
+        <section class="section section-white">
+            <h2 class="section-title">The Impact of Digital Risk Protection</h2>
+            <p class="section-subtitle">Finding warning signs early can help people and organizations respond more effectively.</p>
+            <div class="effect-grid">
+                <article class="effect-card"><h3>✅ Customer Trust</h3><p>Responding to fake websites helps customers find legitimate services.</p></article>
+                <article class="effect-card"><h3>📉 Reduced Fraud Risk</h3><p>Early phishing awareness can reduce the chance of financial loss.</p></article>
+                <article class="effect-card"><h3>🛡️ Brand Reputation</h3><p>Protecting online identity supports long-term credibility.</p></article>
+                <article class="effect-card"><h3>⚡ Faster Response</h3><p>Clear alerts and recommendations help teams act promptly.</p></article>
+            </div>
+        </section>
+
+        <section class="cta" id="contact">
+            <h2>Ready to Protect Your Digital Presence?</h2>
+            <p>Explore the demo tools and learn how to recognize common online risks.</p>
+            <a href="#tools" class="btn">Try Tools Now</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>🛡️ DigiRisk Protect</h3>
+                <p>A digital risk protection concept focused on brand impersonation, phishing awareness, and potential data exposure.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/lakshita-gulati-996638393" target="_blank" rel="noopener noreferrer">🔗 LinkedIn</a>
+                    <a href="https://www.instagram.com/lakshitagulati08" target="_blank" rel="noopener noreferrer">📷 Instagram</a>
+                    <a href="https://github.com/" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4>Product</h4>
+                <a href="#features">Brand Protection</a><a href="#features">Phishing Detection</a><a href="#features">Data Leak Monitor</a><a href="#features">VIP Protection</a><a href="#features">Dark Web Intelligence</a>
+            </div>
+            <div class="footer-column">
+                <h4>Resources</h4>
+                <a href="#how">How it Works</a><a href="#tools">Demo Tools</a><a href="#features">Security Topics</a><a href="#contact">Contact</a>
+            </div>
+            <div class="footer-column">
+                <h4>Help Center</h4>
+                <p>For project queries, contact the project team.</p>
+                <p class="small-note">Add only verified, authorized contact details before publishing.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 DigiRisk Protect · Built for a Digital Risk Protection Hackathon</p>
+            <p class="footer-tagline">Stay Safe Online · External Threats. Proactive Protection.</p>
+        </div>
+    </footer>
+</body>
+</html>
